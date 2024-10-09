@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Languages!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <h1 id="title">Hello world!</h1>
+        <p id="paragraph">Max, de nieuwsgierige hond, ontdekte op een dag een geheime tuin vol kleurrijke bloemen. Terwijl hij speelde, vond hij een oude sleutel die naar een verborgen schat leidde.</p>
+        <img src="https://picsum.photos/300/300" alt="een afbeelding">
+    </div>
+
+    <script>
+        function updateTextBasedOnLanguage() {
+            const lang = document.documentElement.lang;
+            const title = document.getElementById('title');
+            const paragraph = document.getElementById('paragraph');
+
+            if (lang === 'nl') {
+                title.textContent = 'Hallo wereld!';
+                paragraph.textContent = 'Max, de nieuwsgierige hond, ontdekte op een dag een geheime tuin vol kleurrijke bloemen. Terwijl hij speelde, vond hij een oude sleutel die naar een verborgen schat leidde.';
+            } else if (lang === 'en') {
+                title.textContent = 'Hello world!';
+                paragraph.textContent = 'Max, the curious dog, one day discovered a secret garden full of colorful flowers. While playing, he found an old key that led to a hidden treasure.';
+            } else if (lang === 'ru') {
+                title.textContent = 'Привет, мир!';
+                paragraph.textContent = 'Макс, любопытная собака, однажды обнаружил секретный сад, полный красочных цветов. Играя, он нашел старый ключ, который привел к спрятанному сокровищу.';
+            } else {
+                title.textContent = 'Language not supported!';
+                paragraph.textContent = 'Sorry, the selected language is not available.';
+            }
+        }
+        updateTextBasedOnLanguage();
+    </script>
+</body>
+</html>
